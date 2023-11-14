@@ -4,7 +4,7 @@ use std::mem::MaybeUninit;
 use std::ops::Deref;
 use std::ops::DerefMut;
 
-/// Box<[T]> that can grow in capacity
+/// Box<[T]> that can grow within in capacity
 #[repr(transparent)]
 pub struct Chunk<T, const N: usize> {
 	slice: NonNull<[T]>,
